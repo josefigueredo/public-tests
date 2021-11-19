@@ -5,7 +5,7 @@ provider "docker" {
 
 # Create NGINX container
 resource "docker_container" "nginx" {
-  image = "\${docker_image.nginx.latest}"
+  image = "${docker_image.nginx.latest}"
   name  = "enginecks"
   ports {
     internal = 80
